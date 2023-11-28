@@ -7,6 +7,7 @@ import com.yunbin.schoolManagement.repository.PersonRepository;
 import com.yunbin.schoolManagement.model.Courses;
 import com.yunbin.schoolManagement.model.EazyClass;
 import com.yunbin.schoolManagement.model.Person;
+import com.yunbin.schoolManagement.service.PersonService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -32,6 +33,9 @@ public class AdminController {
 
     @Autowired
     CoursesRepository coursesRepository;
+
+    @Autowired
+    PersonService personService;
 
     @RequestMapping("/displayClasses")
     public ModelAndView displayClasses(Model model) {
@@ -112,6 +116,9 @@ public class AdminController {
         //List<Courses> courses = coursesRepository.findByOrderByNameDesc();
         List<Courses> courses = coursesRepository.findAll(Sort.by("name").descending());
         ModelAndView modelAndView = new ModelAndView("courses_secure.html");
+        List<Person> teachers = personService.getAllTeachers();
+        //log.info("Teachers: "+teachers);
+        modelAndView.addObject("teachers", teachers);
         modelAndView.addObject("courses",courses);
         modelAndView.addObject("course", new Courses());
         return modelAndView;
@@ -120,6 +127,7 @@ public class AdminController {
     @PostMapping("/addNewCourse")
     public ModelAndView addNewCourse(Model model, @ModelAttribute("course") Courses course) {
         ModelAndView modelAndView = new ModelAndView();
+
         coursesRepository.save(course);
         modelAndView.setViewName("redirect:/admin/displayCourses");
         return modelAndView;

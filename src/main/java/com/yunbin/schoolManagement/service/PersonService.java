@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonService {
 
@@ -21,9 +23,15 @@ public class PersonService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public boolean createNewPerson(Person person){
+    public boolean createNewPerson(Person person,String roleValue) {
         boolean isSaved = false;
-        Roles role = rolesRepository.getByRoleName(EazySchoolConstants.STUDENT_ROLE);
+        Roles role = null;
+        if(roleValue.equals(EazySchoolConstants.STUDENT_ROLE)){
+            role = rolesRepository.getByRoleName(EazySchoolConstants.STUDENT_ROLE);
+        }else{
+            role = rolesRepository.getByRoleName(EazySchoolConstants.TEACHER_ROLE);
+        }
+
         person.setRoles(role);
         person.setPwd(passwordEncoder.encode(person.getPwd()));
         person = personRepository.save(person);
@@ -32,5 +40,9 @@ public class PersonService {
             isSaved = true;
         }
         return isSaved;
+    }
+
+    public List<Person> getAllTeachers() {
+        return personRepository.getAllTeachers();
     }
 }

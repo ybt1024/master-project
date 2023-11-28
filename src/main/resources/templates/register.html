@@ -61,6 +61,7 @@ Author URL: http://w3layouts.com
                                     <input type="text" th:field="*{mobileNumber}" placeholder="Mobile Number"
                                         class="contact-input" />
                                 </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
@@ -81,6 +82,13 @@ Author URL: http://w3layouts.com
                                     <input type="password" th:field="*{confirmPwd}" placeholder="Confirm Password"
                                            class="contact-input" />
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Role:</label>
+                                <select class="form-control" id="role" th:name="role">
+                                    <option value="STUDENT">Student</option>
+                                    <option value="TEACHER">Teacher</option>
+                                </select>
                             </div>
 
                         </div>

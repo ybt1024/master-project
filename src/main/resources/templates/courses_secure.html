@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eazy School - Best Educational Institute for your Child</title>
+    <title>School Management</title>
     <!-- Google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Template CSS Style link -->
@@ -65,6 +65,11 @@
                                 <input type="text" class="form-control" name="fees" id="fees" th:field="*{fees}"
                                        required placeholder="Enter fees">
                             </div>
+                            <!-- Dropdown for selecting a teacher -->
+                            <label class="control-label" for="teacher">Select Teacher</label>
+                            <select class="form-control" id="teacher" name="teacher" th:field="*{teacher}">
+                                <option th:each="teacher : ${teachers}" th:value="${teacher.personId}" th:text="${teacher.name}"></option>
+                            </select>
                         </div>
                         <div class="modal-footer border-top-0 d-flex justify-content-center">
                             <button type="submit" class="btn btn-style btn-style-3">Submit</button>

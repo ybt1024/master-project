@@ -24,4 +24,8 @@ public class Courses extends BaseEntity{
 
     @ManyToMany(mappedBy = "courses", fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
     private Set<Person> persons = new HashSet<>();
+
+    @ManyToOne
+    @JoinColumn(name = "person_id", referencedColumnName = "personId") // Foreign key to represent the teacher
+    private Person teacher;
 }

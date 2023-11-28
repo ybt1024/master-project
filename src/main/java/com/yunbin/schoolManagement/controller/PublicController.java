@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Slf4j
 @Controller
@@ -28,11 +29,11 @@ public class PublicController {
     }
 
     @RequestMapping(value ="/createUser",method = { RequestMethod.POST})
-    public String createUser(@Valid @ModelAttribute("person") Person person, Errors errors) {
+    public String createUser(@Valid @ModelAttribute("person") Person person, @RequestParam("role") String role, Errors errors) {
         if(errors.hasErrors()){
             return "register.html";
         }
-        boolean isSaved = personService.createNewPerson(person);
+        boolean isSaved = personService.createNewPerson(person,role);
         if(isSaved){
             return "redirect:/login?register=true";
         }else {
