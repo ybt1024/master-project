@@ -17,3 +17,13 @@ define the instance, setting up constrains.
 Using spring security, only certain roles would be able to access certain resources.
 ### 2.6 templates
 page templates contains thymeleaf options
+![sc1](https://github.com/ybt1024/master-project/assets/60807383/860ee702-7298-49a6-b4a4-71af39174bd0)
+![sc2](https://github.com/ybt1024/master-project/assets/60807383/55fcd2a8-e87c-403e-aced-2f25d8aa69ab)
+![sc6](https://github.com/ybt1024/master-project/assets/60807383/61a943c9-f38e-420c-ace3-65b0735a5c6b)
+![sc5](https://github.com/ybt1024/master-project/assets/60807383/5ae84321-0b9c-4ec2-a872-d85273914d30)
+![sc4](https://github.com/ybt1024/master-project/assets/60807383/feb272ff-d74d-4ce1-a79f-f910db99ba57)
+![sc8](https://github.com/ybt1024/master-project/assets/60807383/30d93cba-001d-46e8-b008-a83e165d025c)
+![sc7](https://github.com/ybt1024/master-project/assets/60807383/0bb84764-e6db-403c-a338-2e0b143ec1c1)
+![sc3](https://github.com/ybt1024/master-project/assets/60807383/f724eb69-e095-4a84-830b-7b049ae06752)
+
+
