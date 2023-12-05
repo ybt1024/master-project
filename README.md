@@ -11,9 +11,9 @@ There will be adminController, StudentController and teacher Controller for each
 This layer perform business logic, which is called by the controller layer.
 ### 2.3 repository layer
 utilize Spring JPA as the ORM to handle impedance mismatch.
-JPA queries was used to implement the features.
+JPA queries was used to implement the features. It support CRUD, sorting, and other advanced functionalities.
 ### 2.4 model
-define the instance, setting up constrains.
+define the instance, setting up the validation for each field.
 ### 2.5 security
 Using spring security, only certain roles would be able to access certain resources.
 ProjectSecurityConfig specified how each role would be able to access certain resource. UserNamePwdAuthenticationProvider is used to authenticate users.
