@@ -8,12 +8,12 @@ The project uses rest controller to handle backend requests. It also use global 
 handler to catch and handle unexpected crashes.
 There will be adminController, StudentController and teacher Controller for each role. And PublicController for general requests.
 ### 2.2 service layer
-This layer perform business logic, which is called by the controller layer.
+This layer performs business logic, which is called by the controller layer. For example when register, you can choose your role as a teacher/student, and specify your personal information based on your role. This layer would handle all these logic.
 ### 2.3 repository layer
 utilize Spring JPA as the ORM to handle impedance mismatch.
 JPA queries was used to implement the features. It support CRUD, sorting, and other advanced functionalities.
 ### 2.4 model
-define the instance, setting up the validation for each field.
+define the instance, setting up the validation for each field.Like for certain field(Address), it shouldn't be blank. For zip code, it should be 5 digit of numbers etc.
 ### 2.5 security
 Using spring security, only certain roles would be able to access certain resources.
 ProjectSecurityConfig specified how each role would be able to access certain resource. UserNamePwdAuthenticationProvider is used to authenticate users.
