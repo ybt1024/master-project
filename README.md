@@ -1,16 +1,16 @@
 # master-project
 ## 1. overview
 Based on Springboot, the author developed a school management system as the master project. The project uses
-a MVC structure, which utilize mysql as the database server. The frontend is built by javascript, thymeleaf and bootstrap.
+a MVC structure, which utilize mysql as the database server. The frontend is built by javascript, thymeleaf and bootstrap.  
 
 
-REST API: The application provides a REST API for integration with other systems and applications.
-Security: Spring Boot offers built-in security features for user authentication and authorization.
-The application is structured with a layered architecture, including:
+REST API: The application provides a REST API for integration with other systems and applications.  
+Security: Spring Boot offers built-in security features for user authentication and authorization.  
+The application is structured with a layered architecture, including:  
 
-Presentation Layer: Handles user interface and interaction.
-Business Logic Layer: Implements core functionalities and business rules.
-Data Access Layer: Communicates with the database and retrieves/manipulates data.
+Presentation Layer: Handles user interface and interaction.  
+Business Logic Layer: Implements core functionalities and business rules.  
+Data Access Layer: Communicates with the database and retrieves/manipulates data.  
 
 ## 2. design
 ### 2.1 controllers
