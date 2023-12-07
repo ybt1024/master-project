@@ -39,5 +39,5 @@ Utiliziing thymeleaf which is a built-in frontend for springboot, template files
 ![sc7](https://github.com/ybt1024/master-project/assets/60807383/0bb84764-e6db-403c-a338-2e0b143ec1c1)
 ![sc3](https://github.com/ybt1024/master-project/assets/60807383/f724eb69-e095-4a84-830b-7b049ae06752)
 
-### 2.8 Demo
+## 3 Demo
 https://drive.google.com/file/d/11gP73HZ5r4gDYQhnlhOLsowhwKiEf3IO/view?usp=drive_link
