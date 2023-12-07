@@ -12,6 +12,8 @@ Presentation Layer: Handles user interface and interaction.
 Business Logic Layer: Implements core functionalities and business rules.  
 Data Access Layer: Communicates with the database and retrieves/manipulates data.  
 
+DEMO:https://drive.google.com/file/d/11gP73HZ5r4gDYQhnlhOLsowhwKiEf3IO/view?usp=drive_link
+
 ## 2. design
 ### 2.1 controllers
 The project uses rest controller to handle backend requests. It also use global exception
